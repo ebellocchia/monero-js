@@ -3,7 +3,7 @@
 
 ## Mnemonic
 
-This library allows to handle mnemonic phrases for Monero, like the Monero official wallet.
+This library allows to handle mnemonic phrases and generate keys and addresses/subaddresses for Monero, like the Monero official wallet.
 
 ### Generation
 
@@ -150,7 +150,7 @@ Example:
         console.log("Subaddress 2,0:", wallet.subaddress(2).encode());
     })
 
-## Testing
+## Run tests
 
 Run:
 
