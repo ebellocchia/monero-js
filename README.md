@@ -1,8 +1,11 @@
-# Mnemonic
+# Monero JS
+[![Test](https://github.com/ebellocchia/monero-js/actions/workflows/test.yml/badge.svg)](https://github.com/ebellocchia/monero-js/actions/workflows/test.yml)
+
+## Mnemonic
 
 This library allows to handle mnemonic phrases for Monero, like the Monero official wallet.
 
-## Generation
+### Generation
 
 Generate random entropy bytes and encode them to a mnemonic phrase.
 
@@ -16,7 +19,7 @@ Generate random entropy bytes and encode them to a mnemonic phrase.
     mnemonic = monero.mnemonic.mnemonicGenerateWithChecksum();
     console.log(mnemonic);
 
-## Encoding
+### Encoding
 
 Get a mnemonic phrase from entropy bytes.\
 This shall be used only if the entropy bytes are known and shall not be randomly generated. Otherwise, the previous methods shall be used.\
@@ -34,7 +37,7 @@ Entropy shall be 32-byte long. An `Error` is thrown if the entropy length is not
     mnemonic = monero.mnemonic.mnemonicEncodeWithChecksum(entropy);
     console.log(mnemonic);
 
-## Decoding
+### Decoding
 
 Get back entropy bytes from a mnemonic phrase.\
 Both mnemonics with and without checksum can be decoded.\
@@ -47,7 +50,7 @@ An `Error` is thrown if the mnemonic is not valid.
 
     console.log(entropy.toString("hex"));
 
-## Validation
+### Validation
 
 Get if a mnemonic phrase is valid or not. It returns a boolean value.
 
@@ -58,7 +61,7 @@ Get if a mnemonic phrase is valid or not. It returns a boolean value.
 
     console.log(is_valid);
 
-## Seed Generation
+### Seed Generation
 
 Generate seed from a mnemonic phrase. For Monero, the seed is equal to the entropy bytes so it"s the same of decoding a mnemonic.
 
@@ -69,10 +72,11 @@ Generate seed from a mnemonic phrase. For Monero, the seed is equal to the entro
 
     console.log(seed.toString("hex"));
 
-# Wallet
+## Wallet
 
 This library allows to create Monero wallets and generate addresses.
-## Construction
+
+### Construction
 
 From seed:
 
@@ -116,7 +120,7 @@ From watch-only (an `Error` is thrown if one of the keys is not valid):
         console.log("Public view key:", wallet.publicViewKey.toString("hex"));
     })
 
-## Get Address
+### Get Address
 
 Primary, Integrated and subaddresses are supported.\
 An `Error` is thrown if:
@@ -146,8 +150,12 @@ Example:
         console.log("Subaddress 2,0:", wallet.subaddress(2).encode());
     })
 
-# Testing
+## Testing
 
 Run:
 
     npm run test
+
+# License
+
+This software is available under the MIT license.
