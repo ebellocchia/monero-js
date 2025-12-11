@@ -2,12 +2,12 @@
   "name": "monero-js",
   "author": "Emanuele Bellocchia <ebellocchia@gmail.com>",
   "description": "Javascript implementation for Monero mnemonic, keys and subaddresses generation",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "main": "src/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ebellocchia/investment_fund.git"
+    "url": "git+https://github.com/ebellocchia/monero-js.git"
   },
   "scripts": {
     "test": "npx mocha"
@@ -17,7 +17,6 @@
     "src"
   ],
   "dependencies": {
-    "bigint-buffer": "^1.1.5",
     "bs58": "^5.0.0",
     "crc-32": "^1.2.2",
     "keccak256": "^1.0.6",

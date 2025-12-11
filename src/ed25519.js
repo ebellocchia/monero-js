@@ -20,7 +20,7 @@
 
 "use-strict";
 
-const { toBigIntLE, toBufferLE } = require("bigint-buffer");
+const { toBigIntLE, toBufferLE } = require("./bigint_utils.js");
 const nacl_factory = require("./js-nacl/nacl_factory");
 const utils = require("./utils");
 
