@@ -24,7 +24,6 @@ const { Buffer } = require("buffer");
 
 // Convert buffer (Little Endian) to BigInt
 function toBigIntLE(buffer) {
-    // Copiamo il buffer per non invertire l'originale
     const reversed = Buffer.from(buffer).reverse();
     const hex = reversed.toString("hex");
     if (hex.length === 0) {
